@@ -12,6 +12,14 @@ import {
   HiOutlineUsers,
   HiOutlineDocumentReport,
   HiOutlineCog,
+  HiOutlineCalculator,
+  HiOutlineClipboardList,
+  HiOutlineDocumentDuplicate,
+  HiOutlineTruck,
+  HiOutlineTemplate,
+  HiOutlineChartBar,
+  HiOutlineChartPie,
+  HiOutlineChartSquareBar,
 } from "react-icons/hi";
 
 const SIDEBAR_ITEMS = [
@@ -24,43 +32,95 @@ const SIDEBAR_ITEMS = [
         icon: HiOutlineHome,
       },
       {
-        title: "Products",
-        url: "/products",
-        icon: HiOutlineCube,
-      },
-    ],
-  },
-  {
-    group: "Operations",
-    items: [
-      {
         title: "Orders",
         url: "/orders",
         icon: HiOutlineShoppingBag,
       },
       {
-        title: "Sellers",
-        url: "/sellers",
-        icon: HiOutlineUsers,
+        title: "Products",
+        url: "/products",
+        icon: HiOutlineCube,
       },
       {
-        title: "Invoices",
-        url: "/invoices",
-        icon: HiOutlineDocumentReport,
+        title: "Customers",
+        url: "/customers",
+        icon: HiOutlineUsers,
       },
     ],
   },
   {
-    group: "Others",
+    group: "eCommerce",
+    items: [
+      {
+        title: "Calculated Orders",
+        url: "/ecommerce/calculated-orders",
+        icon: HiOutlineCalculator,
+      },
+      {
+        title: "Seller Ledger",
+        url: "/ecommerce/seller-ledger",
+        icon: HiOutlineClipboardList,
+      },
+      {
+        title: "Invoicing",
+        url: "/ecommerce/invoicing",
+        icon: HiOutlineDocumentDuplicate,
+      },
+      {
+        title: "AWBs",
+        url: "/ecommerce/awbs",
+        icon: HiOutlineTruck,
+      },
+      {
+        title: "Inventory Rules",
+        url: "/ecommerce/inventory-rules",
+        icon: HiOutlineTemplate,
+      },
+    ],
+  },
+  {
+    group: "Reports",
+    items: [
+      {
+        title: "Daily Reports",
+        url: "/reports/daily",
+        icon: HiOutlineChartBar,
+      },
+      {
+        title: "Monthly Summary",
+        url: "/reports/monthly",
+        icon: HiOutlineChartPie,
+      },
+      {
+        title: "Analytics",
+        url: "/reports/analytics",
+        icon: HiOutlineChartSquareBar,
+      },
+    ],
+  },
+  {
+    group: "System",
     items: [
       {
         title: "Settings",
-        url: "/settings",
+        url: "/system/settings",
         icon: HiOutlineCog,
+      },
+      {
+        title: "Users",
+        url: "/system/users",
+        icon: HiOutlineUsers,
+      },
+      {
+        title: "Logs",
+        url: "/system/logs",
+        icon: HiOutlineDocumentReport,
       },
     ],
   },
 ];
+
+// Rest of the Sidebar component code remains the same
 
 export function Sidebar() {
   const pathname = usePathname();
